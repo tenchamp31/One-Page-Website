@@ -194,7 +194,7 @@ section {
     background-color: #f5f3f3;
 }
 
-.reservations {
+.reservation {
     width: 60%;
     padding: 10px;
     border-radius: 8px;
@@ -203,7 +203,7 @@ section {
     box-shadow: -1px -1px 1px 0 rgba(0,0,0,0.1), 1px 2px 10px 0 rgba(0,0,0,0.5);
 }
 
-.reservations h2 {
+.reservation h2 {
     width: 70%;
     text-align: center;
     margin: 0 auto;
@@ -213,7 +213,7 @@ section {
     word-spacing: 0pt;
 }
 
-.reservations h2 span {
+.reservation h2 span {
     width: 70%;
     text-align: center;
     margin: 0 auto;
@@ -225,13 +225,13 @@ section {
     word-spacing: .3pt;
 }
 
-.reservations p {
+.reservation p {
     color: #13161b;
     width: 50%;
     margin: 0 auto;
 }
 
-.reservations form {
+.reservation form {
     font-size: 15px;
     outline: none;
     font-weight: 600;
@@ -246,7 +246,7 @@ section {
     font-family: 'Raleway', sans-serif;
 }
 
-.reservations input[type="text"] {
+.reservation input[type="text"] {
     font-size: 15px;
     outline: none;
     font-weight: 600;
@@ -264,7 +264,7 @@ section {
     font-family: 'Raleway', sans-serif;
 }
 
-.reservations input[type="text"]:hover {
+.reservation input[type="text"]:hover {
     box-shadow: 0 0 18px rgba(100,65,0,.8);
 }
 
