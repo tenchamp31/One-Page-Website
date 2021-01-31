@@ -1,43 +1,50 @@
-<script>
-// Open the Modal
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
+
+
+let slideIndex = 1;
+showSlide(slideIndex);
+
+
+
+function openLightbox() {
+  document.getElementById('Lightbox').style.display = 'block';
 }
 
-// Close the Modal
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
+function closeLightbox() {
+  document.getElementById('Lightbox').style.display = 'none';
+};
 
-var slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+};
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
+function toSlide(n) {
+  showSlide(slideIndex = n);
+};
+
+
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName('slide');
+  let modalPreviews = document.getElementsByClassName('modal-preview');
+
+  if (n > slides.length) {
+    slideIndex = 1;	
+  };
+  
+  if (n < 1) {
+    slideIndex = slides.length;
+  };
+
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-
-</script>
+  };
+  
+  for (let i = 0; i < modalPreviews.length; i++) {
+    modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+  };
+  
+  slides[slideIndex - 1].style.display = 'block';
+  modalPreviews[slideIndex - 1].className += ' active';
+};
